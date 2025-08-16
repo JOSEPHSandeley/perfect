@@ -1,0 +1,63 @@
+ <!-- Page d'Inscriptions -->
+  <link rel="stylesheet" href="style2.css">
+  <script src="sript.js"></script>
+    <script src="script1.js"></script>
+
+        <div id="inscriptionsPage" class="page">
+             
+           <center> <h3><span class="tet">Formulaire des Inscriptions</h3></span><hr>
+            <div id="inscriptionAlert"></div>
+            
+            <form onsubmit="addStudent(event)" style="margin-bottom: 30px;">
+                <div class="form-group"><br>
+                    <br><br>
+                    <label for="studentName">Nom complet de l'eleve:</label>
+                    <input type="text" id="studentName" required><br>
+                    
+                </div>
+                <br>
+                <br>
+                
+                <div class="form-group">
+                    <label for="studentAge">Âge:</label>
+                    <input type="number" id="studentAge" min="5" max="25" required>
+                </div><br><br>
+                <div class="form-group">
+                    <label for="studentClass">Classe:</label>
+                    <select id="studentClass" required>
+                        <option value="">Sélectionner une classe</option>
+                        <option value="7ème">7ème</option>
+                        <option value="8ème">8ème</option>
+                        <option value="9ème">9ème</option>
+                        <option value="Nouveau secondaire I">Nouveau secondaire I</option>
+                        <option value="Nouveau secondaire II">Nouveau secondaire II</option>
+                        <option value="Nouveau secondaire III">Nouveau secondaire III</option>
+                        <option value="Nouveau secondaire IV">Nouveau secondaire IV</option>
+                        
+                    </select><br><br><br>
+                
+                </div>
+                <div class="form-group">
+                    <label for="parentName">Nom du parent/tuteur:</label>
+                    <input type="text" id="parentName" required>
+                </div>
+                <br><br>
+                <div class="form-group">
+                    <label for="parentPhone">Téléphone du parent:</label>
+                    <input type="tel" id="parentPhone" required>
+                    <br><br><br>
+                    <div class="form-group">
+                    <label for="E-mail">Mail:</label>
+                    <input type="mail" id="mail" required>
+                </div>
+                </div>
+                <br><br>
+               
+                <button type="submit" class="btn">Inscrire l'élève</button>
+                <br>
+                <br>
+                <a href="index.html">tourner vers l'accueille</a>
+                <script src="script.js"></script>
+            </form> 
+
+        </center>

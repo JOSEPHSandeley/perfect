@@ -1,0 +1,61 @@
+header{
+    background-color: gold;
+    color: rgb(3, 3, 65);
+}
+body{
+    color: cornflowerblue;
+    background-color: burlywood;
+}
+.espas
+{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+.espas{
+	
+	background-size: 500px;
+	animation-name: monAnimation;
+	animation-duration: 10s;
+}
+@keyframes monAnimation{
+	0%{
+		transition: scale(1);
+	}
+	50%{
+		transform: scale(2);
+	}
+}
+em{
+	color: rgb(238, 255, 0);
+	background-repeat: no-repeat ;
+}
+div{
+    animation: deplase 2s infinite;
+}
+
+#perf{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;   
+}
+.ooo{
+    background-color: rgb(224, 223, 230);
+    border-radius: 5px;
+}
+.ooo:hover{
+    color: var(--bg-primary);
+    cursor: pointer;
+    color: rgb(231, 22, 22);
+}
+.pop{
+
+    color: black;
+    font-family: sans-serif;
+}
+.ola{
+    color: blue;
+}

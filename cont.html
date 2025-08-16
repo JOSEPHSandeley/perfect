@@ -1,0 +1,54 @@
+<Doctype html>
+    <html>
+        <head>
+            <style>
+               body{
+                background-color: aqua;
+               }
+#clignote{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+                
+           .clignote {
+    font-size: 2rem;
+    font-weight: bold;
+    color: red;
+    animation: blinkUp 1.5s infinite;
+  }
+
+  @keyframes blinkUp {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 0; /* disparaît */
+      transform: translateY(-10px); /* monte un peu */
+    }
+    100% {
+      opacity: 1; /* réapparaît */
+      transform: translateY(0); /* revient à sa place */
+    }
+  }
+</style>
+
+        </head>
+        <title>Contacts</title>
+
+        <body>
+            <div id="clignote">
+            <marquee ><h1><span class="clignote">CONTACTS</span></h1></marquee> <marquee ><h1><span class="clignote">CONTACTS</span></h1></marquee> <marquee ><h1><span class="clignote">CONTACTS</span></h1></marquee></div><hr>
+<center><h2><div class="klk">
+            <p><img src="Hugues.png" width="200" height="200" border-radius="10px"><br> PDG: ................   ..............  <br><br>
+            📞Tel: (+509) 0000-0000<br><br>
+           <marquee direction="right"> 📧E-mail: Institutionunivers@gmail.com</marquee>
+</p>
+<marquee direction="left"><h4>N’oubliez pas de nous contacter pour plus d’informations. Nous restons à votre entière disposition.</h4></marquee>
+
+</div></h2></center>
+        </body>
+    </html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institution Univers</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="sript.js"></script>
+     <script src="script1.js"></script>
+</head>
+<body>
+   <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thème Clair / Sombre</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="theme-controls">
+      <button class="theme-toggle" onclick="toggleTheme()" id="themeButton">
+          <span id="themeIcon">🌙</span>
+          <span id="themeText"></span>
+      </button>
+  </div>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+            </div>
+            <div class="hero"><marquee><span id="mark">La Difference Dans L'excellence</span><br><span id="pye">La Difference Dans L'excellence</span><br><span id="jan">La Difference Dans L'excellence</span></marquee></div>
+            
+          <div id="photo">
+    <div class="container">
+        <div class="header">
+            
+            <h1><img src="LOGO.png" width="50" height="50"><span class="cou">INSTITUTION UNIVERS <img src="LOGO.png" width="50" height="50"></span></h1>
+            
+            <div id="loggedInHeader" style="display: none;">
+                <button class="btn logout-btn" onclick="logout()">Déconnexion</button>
+                <div class="nav-buttons">
+                    <button class="btn" onclick="showPage('inscriptions')">📝 Inscriptions</button>
+                    <button class="btn" onclick="showPage('performances')">📊 Performances</button>
+                  
+
+
+
+                </div>
+            </div>
+        </div>
+        </div>  
+
+        <!-- Page de Connexion -->
+        <div id="loginPage" class="page active">
+            <div class="login-form">
+                <h2><span class="popo"> Connexion</span></h2>
+                <div id="loginAlert"></div>
+                <form onsubmit="login(event)">
+                    <div class="form-group">
+                        <label for="username">Nom d'utilisateur:</label>
+                        <input type="text" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mot de passe:</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button type="submit" class="btn"><span id="konek">Se connecter</span></button><br>
+                    <br>
+                    <a href="inscription.html"> <h4><span id="konek"> Cliquer Ici Pour Le Formulaire D'inscription</span></h4></a>
+                   
+                </form>
+               
+            </div>
+
+        </div>
+        <footer>
+       <center> <h4> <span id="pied"> <a href="Apropos.html"> Voir l'Aproppos de L'Institution</a></span> </h4> </center><br>
+       <br>
+        </footer>
+
+        <!-- Page d'Inscriptions -->
+        <div id="inscriptionsPage" class="page">
+            <h2> Gestion des Inscriptions</h2>
+            <div id="inscriptionAlert"></div>
+            
+            <form onsubmit="addStudent(event)" style="margin-bottom: 30px;">
+                <div class="form-group">
+                    <label for="studentName">Nom complet de l'élève:</label>
+                    <input type="text" id="studentName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="studentAge">Âge:</label>
+                    <input type="number" id="studentAge" min="5" max="25" required>
+                </div><br><br>
+                <div class="form-group">
+                    <label for="studentClass">Classe:</label>
+                    <select id="studentClass" required>
+                        <option value="">Sélectionner une classe</option>
+                        <option value="7ème">7ème</option>
+                        <option value="8ème">8ème</option>
+                        <option value="9ème">9ème</option>
+                        <option value="Nouveau secondaire I">Nouveau secondaire I</option>
+                        <option value="Nouveau secondaire II">Nouveau secondaire II</option>
+                        <option value="Nouveau secondaire III">Nouveau secondaire III</option>
+                        <option value="Nouveau secondaire IV">Nouveau secondaire IV</option>
+                        
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="parentName">Nom du parent:</label>
+                    <input type="text" id="parentName" required>
+                </div>
+                <div class="form-group">
+                    <label for="parentPhone">Téléphone du parent:</label>
+                    <input type="tel" id="parentPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="parentPhone">E-mail:</label>
+                    <input type="tel" id="Mail" required>
+                </div>
+                <button type="submit" class="btn">Inscrire l'élève</button>
+            </form>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalStudents">0</div>
+                    <div>Élèves inscrits</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalClasses">0</div>
+                    <div>Classes actives</div>
+                </div>
+            </div>
+
+            <h3>Liste des élèves inscrits:</h3>
+            <div id="studentsList"></div>
+        </div>
+
+        <!-- Page de Performances -->
+        <div id="performancesPage" class="page">
+            <h2> Suivi des Performances a Feliciter</h2>
+            <div id="performanceAlert"></div>
+            
+            <form onsubmit="addGrade(event)" style="margin-bottom: 30px;">
+                <div class="form-group">
+                    <label for="gradeStudent">Sélectionner un élève:</label>
+                    <select id="gradeStudent" required>
+                        <option value="">Choisir un élève</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Matière:</label>
+                    <select id="subject" required>
+                        <option value="">Sélectionner une matière</option>
+                        <option value="Mathématiques">Mathématiques</option>
+                        <option value="Français">Français</option>
+                        <option value="Sciences">Histoire</option>
+                        <option value="Histoire-Géographie">Géographie</option>
+                        <option value="Anglais">Anglais</option>
+                        <option value="Geologie">Geologie</option>
+                        <option value="EPS">EPS</option>
+                        <option value="Physique">Physique</option>
+                        <option value="Chimie">Chimie</option>
+                        <option value="Biologie">Biologie</option>
+                        <option value="Economie">Economie</option>
+                        <option value="Espagnole">Espagnole</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="grade">Note (sur 20):</label>
+                    <input type="number" id="grade" min="0" max="20" step="0.5" required>
+                </div>
+                <div class="form-group">
+                    <label for="comment">Commentaire (optionnel):</label>
+                    <textarea id="comment" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn">Ajouter la note</button>
+            </form>
+
+            <h3>Performances des élèves:</h3>
+            <div id="performancesList" class="student-grid"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
